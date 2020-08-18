@@ -7,6 +7,7 @@ MAINTAINER yong
 # ADD target/lib           /usr/share/myservice/lib
 # Add the service itself
 
+
 WORKDIR /root
 
 ARG JAR_FILE

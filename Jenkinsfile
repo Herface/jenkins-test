@@ -13,7 +13,7 @@ pipeline {
         }
         stage("build docker image") {
             steps {
-                sh  'mvn dockerfile:build -Dmaven.test.skip=true'
+                sh  'docker build -f Dockerfile --build-args JAR_FILE=jenkins-test-0.0.1-SNAPSHOT.jar -t yong/bootapp:1.0 .'
             }
         }
     }
