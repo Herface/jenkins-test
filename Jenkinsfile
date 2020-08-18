@@ -11,5 +11,10 @@ pipeline {
                 sh  'mvn clean package -Dmaven.test.skip=true'
             }
         }
+        stage("build docker image") {
+            steps {
+                sh  'mvn dockerfile:build -Dmaven.test.skip=true'
+            }
+        }
     }
 }
